@@ -398,7 +398,7 @@ def evaluate(
         except:
             pass
         f1=2*((precision_allx*recallx)/(precision_allx+recallx))
-        p=np.array([save_log,true_positives1x,false_positives1x,false_negatives1x,average_precisions[label][0],recallx,accuracyx,precision_allx,f1])
+        p=np.array([int(save_log[:-3]),true_positives1x,false_positives1x,false_negatives1x,np.float(average_precisions[label][0]),np.float(recallx),np.float(accuracyx),np.float(precision_allx),np.float(f1)])
         #name='Results/{}.txt'.format(save_log[:-3])
         #np.savetxt(name,p)
         return(p)

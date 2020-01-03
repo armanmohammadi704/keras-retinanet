@@ -399,7 +399,8 @@ def evaluate(
             pass
         f1=2*((precision_allx*recallx)/(precision_allx+recallx))
         p=np.array([save_log,true_positives1x,false_positives1x,false_negatives1x,average_precisions[label][0],recallx,accuracyx,precision_allx,f1])
-        name='Results/{}.txt'.format(save_log[:-3])
-        np.savetxt(name,p)
+        #name='Results/{}.txt'.format(save_log[:-3])
+        #np.savetxt(name,p)
+        return(p)
     return average_precisions
 # Editted by Mohammad Rahimzadeh (mr7495@yahoo.com)
